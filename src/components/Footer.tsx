@@ -3,13 +3,13 @@ import { Instagram, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#0a0412] border-t border-white/5 pt-16 pb-8">
+        <footer className="bg-[#0a0412]  border-t border-white/5 pt-16 pb-8">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div className="space-y-4">
-                        <h3 className="text-3xl font-playfair font-bold text-white tracking-widest">
-                            STUDIO <span className="text-primary">8</span>
+                        <h3 className="text-3xl font-playfair font-bold text-white tracking-widest flex items-center gap-2">
+                            <img src="/logo.png" alt="Studio 8" className="h-24 w-24 rounded-full bg-white/10" />
                         </h3>
                         <p className="text-white/60 text-sm leading-relaxed max-w-xs">
                             Experience the art of luxury grooming. Unisex salon services tailored for your unique style and elegance.
@@ -21,7 +21,7 @@ export default function Footer() {
                         <h4 className="text-lg font-playfair font-bold text-white">Contact Us</h4>
                         <div className="flex items-center space-x-3 text-white/70">
                             <Phone className="w-4 h-4 text-primary" />
-                            <span>+91 9348555189</span>
+                            <span>+91 9149510872</span>
                         </div>
                         <div className="flex items-start space-x-3 text-white/70">
                             <MapPin className="w-4 h-4 text-primary mt-1" />

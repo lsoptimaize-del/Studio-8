@@ -8,43 +8,43 @@
 
 @layer base {
   :root {
-    --background: 260 50% 10%;
-    /* Deep Purple Base */
-    --foreground: 45 30% 95%;
-    /* Soft Gold/White */
+    --background: 270 60% 10%;
+    /* Rich Deep Purple */
+    --foreground: 45 30% 98%;
+    /* Bright Off-White */
 
-    --card: 260 45% 15%;
+    --card: 270 50% 15%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 260 45% 15%;
+    --popover: 270 50% 15%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 45 100% 50%;
-    /* Gold */
-    --primary-foreground: 260 50% 15%;
+    --primary: 48 100% 60%;
+    /* Brighter Luxury Gold */
+    --primary-foreground: 270 60% 15%;
 
-    --secondary: 260 30% 25%;
+    --secondary: 270 30% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 260 20% 25%;
-    --muted-foreground: 260 10% 70%;
+    --muted: 270 30% 20%;
+    --muted-foreground: 270 20% 75%;
 
-    --accent: 45 80% 60%;
-    --accent-foreground: 260 50% 15%;
+    --accent: 48 100% 60%;
+    --accent-foreground: 270 60% 15%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 260 30% 30%;
-    --input: 260 30% 30%;
-    --ring: 45 100% 50%;
+    --border: 270 30% 30%;
+    --input: 270 30% 30%;
+    --ring: 48 100% 60%;
 
     --radius: 0.5rem;
   }
 }
 
 body {
-  background: linear-gradient(135deg, #130922 0%, #0a0412 100%);
+  background: radial-gradient(circle at top center, #3b0764 0%, #0f0518 100%);
   color: var(--foreground);
   font-family: var(--font-inter);
 }
