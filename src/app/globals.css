@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-playfair: var(--font-playfair-display);
+  --font-inter: var(--font-inter);
+}
+
+@layer base {
+  :root {
+    --background: 260 50% 10%;
+    /* Deep Purple Base */
+    --foreground: 45 30% 95%;
+    /* Soft Gold/White */
+
+    --card: 260 45% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 260 45% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 45 100% 50%;
+    /* Gold */
+    --primary-foreground: 260 50% 15%;
+
+    --secondary: 260 30% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 20% 25%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 45 80% 60%;
+    --accent-foreground: 260 50% 15%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 30% 30%;
+    --input: 260 30% 30%;
+    --ring: 45 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #130922 0%, #0a0412 100%);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair);
+}
