@@ -21,23 +21,35 @@ export default function Home() {
             <p className="text-white/60 max-w-2xl mx-auto">Experience a new standard of beauty and grooming where luxury meets expertise.</p>
           </SectionReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Unisex Services", desc: "Expert grooming for both men and women in a comfortable environment.", icon: Scissors },
-              { title: "Premium Products", desc: "We exclusively use Loreal, O3+, and Rica for the best results.", icon: Diamond },
-              { title: "Member Benefits", desc: "Exclusive pricing and priority booking for our members.", icon: Crown },
-            ].map((item, i) => (
-              <SectionReveal key={i} delay={i * 0.2}>
-                <div className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all hover:bg-white/10 group text-center h-full">
-                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-                    <item.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-playfair font-bold text-white mb-4">{item.title}</h3>
-                  <p className="text-white/60">{item.desc}</p>
+          {[
+            { title: "Unisex Services", desc: "Expert grooming for both men and women in a comfortable environment.", icon: Scissors, img: "/why-unisex.png" },
+            { title: "Premium Products", desc: "We exclusively use Loreal, O3+, and Rica for the best results.", icon: Diamond, img: "/why-products.png" },
+            { title: "Member Benefits", desc: "Exclusive pricing and priority booking for our members.", icon: Crown, img: "/why-members.png" },
+          ].map((item, i) => (
+            <SectionReveal key={i} delay={i * 0.2}>
+              <div className="relative h-96 rounded-2xl overflow-hidden group border border-white/10">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Gradient Overlay for Text Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 opacity-90 group-hover:opacity-80 transition-opacity duration-500" />
                 </div>
-              </SectionReveal>
-            ))}
-          </div>
+
+                {/* Content */}
+                <div className="relative z-10 p-8 flex flex-col items-center justify-center h-full text-center">
+                  <div className="w-20 h-20 mb-6 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:text-black transition-all duration-300 shadow-xl">
+                    <item.icon className="w-8 h-8 text-primary group-hover:text-black transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-playfair font-bold text-white mb-4">{item.title}</h3>
+                  <p className="text-white/80 leading-relaxed max-w-xs">{item.desc}</p>
+                </div>
+              </div>
+            </SectionReveal>
+          ))}
         </div>
       </section>
 

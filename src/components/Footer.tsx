@@ -21,11 +21,18 @@ export default function Footer() {
                         <h4 className="text-lg font-playfair font-bold text-white">Contact Us</h4>
                         <div className="flex items-center space-x-3 text-white/70">
                             <Phone className="w-4 h-4 text-primary" />
-                            <span>+91 9149510872</span>
+                            <span>+91 91495 10872</span>
                         </div>
                         <div className="flex items-start space-x-3 text-white/70">
-                            <MapPin className="w-4 h-4 text-primary mt-1" />
-                            <span>Studio 8 Unisex Salon, Prime Location, India</span>
+                            <MapPin className="w-4 h-4 text-primary mt-1 shrink-0" />
+                            <div className="space-y-4">
+                                <a href="https://maps.app.goo.gl/X7AKXWByhUm9FHES6" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors">
+                                    Shop 13-14, Sri Swastik Plaza (SSP), 3, Hobli, Kodigehalli, Krishnarajapuram, Bengaluru, Karnataka 560067
+                                </a>
+                                <a href="https://maps.app.goo.gl/6eYob5WFF8ktggkL8" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors">
+                                    Shabari mansion, 1/1, 2nd Cross Rd, Belathur, Kadugodi, Bengaluru, Karnataka 560067
+                                </a>
+                            </div>
                         </div>
                     </div>
 
