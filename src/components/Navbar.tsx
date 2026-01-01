@@ -27,19 +27,15 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-                    ? "bg-black/80 backdrop-blur-md border-b border-white/10 py-4"
-                    : "bg-transparent py-6"
+                ? "bg-black/80 backdrop-blur-md border-b border-white/10 py-4"
+                : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2 group">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/50 group-hover:bg-primary/30 transition-colors">
-                        <Scissors className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="text-2xl font-playfair font-bold text-white tracking-widest">
-                        STUDIO <span className="text-primary">8</span>
-                    </span>
+
+                    <img src="/logo.png" alt="Studio 8" className="h-20 w-20 rounded-full bg-white/10" />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -54,8 +50,8 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="/contact"
-                        className="px-6 py-2 bg-primary text-black font-bold uppercase tracking-wide text-xs rounded hover:bg-yellow-400 transition-colors"
+                        href="https://wa.me/919149510872"
+                        className="px-6 py-2 bg-white text-black font-bold uppercase tracking-wide text-xs rounded hover:bg-gray-200 transition-colors"
                     >
                         Book Now
                     </Link>
@@ -90,9 +86,9 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <Link
-                            href="/contact"
+                            href="https://wa.me/919149510872"
                             onClick={() => setIsOpen(false)}
-                            className="px-8 py-3 bg-primary text-black font-bold uppercase tracking-wide text-sm rounded mt-4"
+                            className="px-8 py-3 bg-white text-black font-bold uppercase tracking-wide text-sm rounded mt-4"
                         >
                             Book Appointment
                         </Link>

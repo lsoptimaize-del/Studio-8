@@ -7,9 +7,9 @@ import { Sparkles } from "lucide-react";
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-background pt-24 pb-12">
+        <main className="min-h-screen bg-background mt-10 pt-24 pb-12">
             <Navbar />
-            <MotionWrapper className="container mx-auto px-6">
+            <MotionWrapper className="container mx-auto px-6 mb-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <SectionReveal className="mb-16">
                         <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">About Studio 8</h1>
