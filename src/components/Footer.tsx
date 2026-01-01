@@ -16,8 +16,19 @@ export default function Footer() {
                         </p>
                     </div>
 
+                    {/* Links - Moved up for mobile priority */}
+                    <div className="space-y-4 order-2 md:order-none">
+                        <h4 className="text-lg font-playfair font-bold text-white">Quick Links</h4>
+                        <ul className="space-y-2 text-sm text-white/60">
+                            <li><Link href="/services" className="hover:text-primary transition-colors">Services Menu</Link></li>
+                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Book Appointment</Link></li>
+                        </ul>
+
+                    </div>
+
                     {/* Contact */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 order-3 md:order-none">
                         <h4 className="text-lg font-playfair font-bold text-white">Contact Us</h4>
                         <div className="flex items-center space-x-3 text-white/70">
                             <Phone className="w-4 h-4 text-primary" />
@@ -35,33 +46,21 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Links */}
-                    <div className="space-y-4">
-                        <h4 className="text-lg font-playfair font-bold text-white">Quick Links</h4>
-                        <ul className="space-y-2 text-sm text-white/60">
-                            <li><Link href="/services" className="hover:text-primary transition-colors">Services Menu</Link></li>
-                            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="/contact" className="hover:text-primary transition-colors">Book Appointment</Link></li>
-                        </ul>
-                        <div className="flex space-x-4 pt-4">
-                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black transition-all cursor-pointer">
-                                <Instagram className="w-5 h-5" />
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
                     <p>&copy; {new Date().getFullYear()} Studio 8. All rights reserved.</p>
-                    <a
-                        href="https://lsoptimaize.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors mt-2 md:mt-0"
-                    >
-                        Designed by LS OptimAIze
-                    </a>
+                    <div className="flex items-center gap-2 mt-4 md:mt-0">
+
+                        <a
+                            href="https://www.lsoptimaize.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-80 transition-opacity inline-block"
+                        >
+                            <img src="/lso-logo.png" alt="LS OptimAIze" className="h-25 w-auto" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

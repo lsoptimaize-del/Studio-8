@@ -110,10 +110,6 @@ export default function AboutPage() {
                                         </div>
                                     ))}
                                 </div>
-
-                                <button className="px-8 py-4 bg-primary text-black font-bold text-sm uppercase tracking-widest rounded hover:bg-white transition-colors duration-300">
-                                    Meet Our Team
-                                </button>
                             </SectionReveal>
                         </div>
                     </div>
@@ -132,27 +128,29 @@ export default function AboutPage() {
                         </p>
                     </SectionReveal>
 
-                    <div className="relative rounded-2xl overflow-hidden aspect-video md:aspect-[21/9] border border-white/10 shadow-2xl group">
+                    <div className="relative rounded-2xl overflow-hidden aspect-video md:aspect-[21/9] border border-white/10 shadow-2xl group mb-8">
                         <SectionReveal>
                             <img
-                                src="/about-team.png"
+                                src="/about-atmosphere.png"
                                 alt="Studio 8 Atmosphere"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-
-                            <div className="absolute bottom-0 left-0 w-full p-8 md:p-12">
-                                <blockquote className="max-w-3xl border-l-4 border-primary pl-6">
-                                    <p className="text-2xl md:text-3xl font-playfair italic text-white mb-4">
-                                        "We didn't just want to build a salon. We wanted to create an experience that uplifts your spirit as much as it enhances your look."
-                                    </p>
-                                    <footer className="text-primary font-bold tracking-widest uppercase text-sm">
-                                        — The Studio 8 Team
-                                    </footer>
-                                </blockquote>
-                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40" />
                         </SectionReveal>
                     </div>
+
+                    <SectionReveal>
+                        <div className="w-full text-center">
+                            <blockquote className="max-w-4xl mx-auto">
+                                <p className="text-2xl md:text-3xl font-playfair italic text-white mb-6 leading-normal">
+                                    "We didn't just want to build a salon. We wanted to create an experience that uplifts your spirit as much as it enhances your look."
+                                </p>
+                                <footer className="text-primary font-bold tracking-widest uppercase text-sm">
+                                    — The Studio 8 Team
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </SectionReveal>
                 </div>
             </section>
 

@@ -108,6 +108,27 @@ export default function ContactPage() {
                 </div>
             </section>
 
+            {/* WhatsApp CTA Section */}
+            <section className="py-16 bg-primary/5 border-y border-white/5 relative overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10 text-center">
+                    <SectionReveal>
+                        <h2 className="text-3xl font-playfair font-bold text-white mb-6">Need Immediate Assistance?</h2>
+                        <p className="text-white/60 mb-8 max-w-xl mx-auto">
+                            Prefer to chat? Connect with us directly on WhatsApp for quick bookings and queries.
+                        </p>
+                        <a
+                            href="https://wa.me/919149510872"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-[#20ba5a] transition-colors shadow-lg shadow-[#25D366]/20"
+                        >
+                            <Phone className="w-5 h-5 fill-current" />
+                            Chat on WhatsApp
+                        </a>
+                    </SectionReveal>
+                </div>
+            </section>
+
             {/* Locations Section - Replacing Newsletter */}
             <section className="py-24 bg-neutral-900 border-t border-white/10">
                 <div className="container mx-auto px-6">

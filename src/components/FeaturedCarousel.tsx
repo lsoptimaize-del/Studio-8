@@ -16,7 +16,7 @@ const features = [
         title: "Keratin Treatment",
         subtitle: "Silky Smooth Force",
         description: "Transform frizzy, unruly hair into smooth, shiny perfection. Our premium keratin formula restores health and radiance.",
-        image: "/keratin.png",
+        image: "/Keratin.png",
     },
     {
         title: "Bridal Packages",
