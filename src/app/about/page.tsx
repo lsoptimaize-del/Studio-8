@@ -186,7 +186,7 @@ export default function AboutPage() {
                                 <Phone className="w-6 h-6" />
                             </div>
                             <h4 className="text-lg font-bold text-white mb-2">Get in Touch</h4>
-                            <p className="text-white/60">+91 91495 10872<br />info@studio8.com</p>
+                            <p className="text-white/60">+91 96869 47430<br />info@studio8.com</p>
                         </SectionReveal>
                     </div>
                 </div>

@@ -50,7 +50,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="https://wa.me/919149510872"
+                        href="https://wa.me/919686947430"
                         className="px-6 py-2 bg-white text-black font-bold uppercase tracking-wide text-xs rounded hover:bg-gray-200 transition-colors"
                     >
                         Book Now

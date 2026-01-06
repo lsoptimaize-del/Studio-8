@@ -126,6 +126,26 @@ const womenServices = [
         ]
     },
     {
+        category: "Nail Art",
+        items: [
+            {
+                title: "Nail Care & Extensions",
+                prices: [
+                    { name: "Soak Off", priceNM: "300", priceM: "300" },
+                    { name: "Nail Art Start", priceNM: "100", priceM: "100" },
+                    { name: "Nail Extension Removing", priceNM: "999", priceM: "999" },
+                    { name: "Temporary Nail Extension", priceNM: "1500", priceM: "1500" },
+                    { name: "Gel Nail Polish", priceNM: "1199", priceM: "1199" },
+                    { name: "Gel Nail Polish Removing", priceNM: "399", priceM: "399" },
+                    { name: "French Nail Polish", priceNM: "1500", priceM: "1500" },
+                    { name: "Refilling", priceNM: "1500", priceM: "1500" },
+                    { name: "Acrylic Nail Extension", priceNM: "2999", priceM: "2999" },
+                    { name: "Gel Nail Extension", priceNM: "2999", priceM: "2999" },
+                ]
+            }
+        ]
+    },
+    {
         category: "Skin & Facials",
         items: [
             {

@@ -88,7 +88,7 @@ export default function Home() {
                 </div>
 
                 <h2 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-6 leading-tight">
-                  Unlock the <span className="text-primary italic">Gold Standard</span> of Beauty.
+                  Unlock the <span className="bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] bg-clip-text text-transparent italic">Gold Standard</span> of Beauty.
                 </h2>
 
                 <p className="text-white/60 text-lg mb-8 leading-relaxed">
@@ -96,7 +96,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center cursor-pointer gap-6">
-                  <a href="https://wa.me/919149510872" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-lg hover:bg-gray-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+                  <a href="https://wa.me/919686947430" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-lg hover:bg-gray-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
                     Apply for Membership
                   </a>
                   <div className="flex items-center gap-2 text-white/50 text-sm">
@@ -108,31 +108,31 @@ export default function Home() {
 
               {/* Visual Side - "The Card" */}
               <div className="w-full md:w-1/2 flex justify-center md:justify-end relative perspective-1000">
-                <div className="relative w-full max-w-sm aspect-[1.586/1] rounded-2xl bg-gradient-to-br from-neutral-900 to-black border border-white/10 shadow-2xl p-6 flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                <div className="relative w-full max-w-sm aspect-[1.586/1] rounded-2xl bg-gradient-to-br from-neutral-900 via-[#D4AF37]/10 to-black border border-[#D4AF37]/50 shadow-2xl p-6 flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-700">
                   {/* Card Shine */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-white/0 to-white/5 opacity-50" />
-                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-45 transform translate-x-[-150%] md:group-hover:translate-x-[150%] transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/20 via-white/0 to-[#D4AF37]/20 opacity-50" />
+                  <div className="absolute -inset-full bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent rotate-45 transform translate-x-[-150%] md:group-hover:translate-x-[150%] transition-transform duration-1000" />
 
                   {/* Card Content */}
                   <div className="flex justify-between items-start relative z-10">
                     <div className="space-y-1">
-                      <p className="text-xs text-white/40 uppercase tracking-[0.2em]">Membership</p>
-                      <h3 className="text-2xl font-playfair font-bold text-white italic">Gold Tier</h3>
+                      <p className="text-xs text-[#D4AF37]/80 uppercase tracking-[0.2em]">Membership</p>
+                      <h3 className="text-2xl font-playfair font-bold text-[#D4AF37] italic">Gold Tier</h3>
                     </div>
                     <img src="/logo.png" alt="Logo" className="w-10 h-10 opacity-80" />
                   </div>
 
                   <div className="relative z-10">
                     <div className="flex gap-3 mb-4">
-                      <div className="w-12 h-8 rounded bg-white/10" />
-                      <div className="w-4 h-8 rounded bg-white/5" />
+                      <div className="w-12 h-8 rounded bg-[#D4AF37]/20 border border-[#D4AF37]/30" />
+                      <div className="w-4 h-8 rounded bg-[#D4AF37]/10 border border-[#D4AF37]/20" />
                     </div>
-                    <p className="font-mono text-white/60 tracking-widest text-sm sm:text-base">0000  8888  XXXX  XXXX</p>
+                    <p className="font-mono text-[#D4AF37]/80 tracking-widest text-sm sm:text-base">0000  8888  XXXX  XXXX</p>
                   </div>
                 </div>
 
                 {/* Decorative Elements around card */}
-                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 blur-3xl rounded-full" />
+                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#D4AF37]/20 blur-3xl rounded-full" />
               </div>
             </div>
           </SectionReveal>

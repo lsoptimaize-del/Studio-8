@@ -68,10 +68,10 @@ export default function ContactPage() {
                                 <Phone className="w-8 h-8" />
                             </div>
                             <h3 className="text-xl font-playfair font-bold text-white mb-4">Call Us</h3>
-                            <p className="text-white/60 mb-2">+91 91495 10872</p>
+                            <p className="text-white/60 mb-2">+91 96869 47430</p>
                             <p className="text-white/40 text-sm">Available for WhatsApp</p>
                             <div className="mt-6 flex justify-center gap-4">
-                                <a href="tel:+919149510872" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all">
+                                <a href="tel:+919686947430" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all">
                                     <Phone className="w-4 h-4" />
                                 </a>
                             </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                             Prefer to chat? Connect with us directly on WhatsApp for quick bookings and queries.
                         </p>
                         <a
-                            href="https://wa.me/919149510872"
+                            href="https://wa.me/919686947430"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-[#20ba5a] transition-colors shadow-lg shadow-[#25D366]/20"
@@ -160,8 +160,8 @@ export default function ContactPage() {
                                 ></iframe>
                             </div>
                             <div className="text-center md:text-left">
-                                <h3 className="text-xl font-playfair font-bold text-white mb-2">Studio 8 - Kodigehalli</h3>
-                                <p className="text-white/60 mb-4 max-w-sm">Shop 13-14, Sri Swastik Plaza (SSP), 3, Hobli, Kodigehalli, Krishnarajapuram, Bengaluru, Karnataka 560067</p>
+                                <h3 className="text-xl font-playfair font-bold text-white mb-2">Studio 8 - Belathur</h3>
+                                <p className="text-white/60 mb-4 max-w-sm">Shabari mansion, 1/1, 2nd Cross Rd, Belathur, Kadugodi, Bengaluru, Karnataka 560067</p>
                                 <a
                                     href="https://maps.app.goo.gl/X7AKXWByhUm9FHES6"
                                     target="_blank"
@@ -188,8 +188,8 @@ export default function ContactPage() {
                                 ></iframe>
                             </div>
                             <div className="text-center md:text-left">
-                                <h3 className="text-xl font-playfair font-bold text-white mb-2">Studio 8 - Belathur</h3>
-                                <p className="text-white/60 mb-4 max-w-sm">Shabari mansion, 1/1, 2nd Cross Rd, Belathur, Kadugodi, Bengaluru, Karnataka 560067</p>
+                                <h3 className="text-xl font-playfair font-bold text-white mb-2">Studio 8 - Kodigehalli</h3>
+                                <p className="text-white/60 mb-4 max-w-sm">Shop 13-14, Sri Swastik Plaza (SSP), 3, Hobli, Kodigehalli, Krishnarajapuram, Bengaluru, Karnataka 560067</p>
                                 <a
                                     href="https://maps.app.goo.gl/6eYob5WFF8ktggkL8"
                                     target="_blank"
