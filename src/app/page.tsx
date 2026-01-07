@@ -11,6 +11,45 @@ export default function Home() {
       <Navbar />
       <HeroSection />
 
+
+      {/* Virtual Tour Section */}
+      <section className="py-24 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <SectionReveal className="text-center mb-12">
+            <span className="text-yellow-500 text-sm font-bold uppercase tracking-widest mb-2 block">Experience Studio 8</span>
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">Virtual Tour</h2>
+          </SectionReveal>
+
+          <SectionReveal delay={0.2}>
+            <div className="relative aspect-[9/16] md:aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl group max-w-sm md:max-w-5xl mx-auto">
+              {/* Desktop Video */}
+              <video
+                src="/studio_pc_vid.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="hidden md:block w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+
+              {/* Mobile Video */}
+              <video
+                src="/studio_mobile_vid.MOV"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="block md:hidden w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+              />
+
+              {/* Vignette Overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)] pointer-events-none" />
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6">
@@ -22,8 +61,8 @@ export default function Home() {
           </SectionReveal>
 
           {[
-            { title: "Unisex Services", desc: "Expert grooming for both men and women in a comfortable environment.", icon: Scissors, img: "/why-unisex.png" },
-            { title: "Premium Products", desc: "We exclusively use Loreal, O3+, and Rica for the best results.", icon: Diamond, img: "/why-products.png" },
+            { title: "Unisex Services", desc: "Expert grooming for both men and women in a comfortable environment.", icon: Scissors, img: "/unisex.jpg" },
+            { title: "Premium Products", desc: "We exclusively use Loreal, O3+, and Rica for the best results.", icon: Diamond, img: "/hairwash.jpg" },
             { title: "Member Benefits", desc: "Exclusive pricing and priority booking for our members.", icon: Crown, img: "/why-members.png" },
           ].map((item, i) => (
             <SectionReveal key={i} delay={i * 0.2}>
@@ -57,7 +96,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col justify-center py-12 bg-black/30 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <SectionReveal className="text-center mb-8">
-            <span className="text-primary text-sm font-bold uppercase tracking-widest mb-2 block">Our Expertise</span>
+            <span className="text-primary text-yellow-500 text-sm font-bold uppercase tracking-widest mb-2 block">Our Expertise</span>
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white">Featured Treatments</h2>
           </SectionReveal>
 

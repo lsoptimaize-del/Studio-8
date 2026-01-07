@@ -14,7 +14,7 @@ export default function ContactPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/contact-hero.png"
+                        src="/reception.jpg"
                         alt="Studio 8 Reception"
                         className="w-full h-full object-cover opacity-70"
                     />

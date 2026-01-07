@@ -5,48 +5,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, Crown } from "lucide-react";
+import Image from "next/image";
 
 // --- OPTIMIZED BACKGROUND (Memoized & GPU Accelerated) ---
 const AuroraBackground = memo(function AuroraBackground() {
     return (
-        <div className="fixed inset-0 -z-10 overflow-hidden bg-black transform-gpu">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-black to-purple-950/30" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(76,29,149,0.2),rgba(0,0,0,0))]" />
-
-            {/* Blob 1 */}
-            <motion.div
-                animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.5, 0.3],
-                    rotate: [0, 90, 0]
-                }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-[30%] -left-[10%] w-[70vw] h-[70vw] bg-purple-900/20 rounded-full blur-[100px] will-change-transform"
+        <div className="fixed inset-0 -z-10 bg-black">
+            <Image
+                src="/reception.jpg"
+                alt="Studio 8 Services Background"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
             />
-
-            {/* Blob 2 */}
-            <motion.div
-                animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.2, 0.4, 0.2],
-                    x: [0, 100, 0]
-                }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute top-[20%] -right-[10%] w-[60vw] h-[60vw] bg-indigo-900/20 rounded-full blur-[100px] will-change-transform"
-            />
-
-            {/* Blob 3 */}
-            <motion.div
-                animate={{
-                    opacity: [0.1, 0.3, 0.1],
-                    y: [0, -50, 0]
-                }}
-                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-0 left-[20%] w-[80vw] h-[40vh] bg-gradient-to-t from-primary/10 to-transparent blur-[80px] will-change-transform"
-            />
-
-            {/* Noise Texture - Static */}
-            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none" />
+            <div className="absolute inset-0 bg-black/70" />
         </div>
     );
 });
@@ -695,7 +668,7 @@ export default function ServicesPage() {
     };
 
     return (
-        <main className="min-h-screen bg-black text-white relative flex flex-col font-sans selection:bg-primary/50 overflow-x-hidden">
+        <main className="min-h-screen text-white relative flex flex-col font-sans selection:bg-primary/50">
             <AuroraBackground />
             <Navbar />
 

@@ -14,7 +14,7 @@ export default function AboutPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/about-hero.png"
+                        src="/symmetry.jpg"
                         alt="Studio 8 Barber Salon"
                         className="w-full h-full object-cover opacity-60"
                     />
@@ -131,7 +131,7 @@ export default function AboutPage() {
                     <div className="relative rounded-2xl overflow-hidden aspect-video md:aspect-[21/9] border border-white/10 shadow-2xl group mb-8">
                         <SectionReveal>
                             <img
-                                src="/about-atmosphere.png"
+                                src="/studio_pc.jpg"
                                 alt="Studio 8 Atmosphere"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
