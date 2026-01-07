@@ -1,31 +1,64 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const HERO_IMAGES = [
+    "/studio_pc.jpg",
+    "/nail_showcase.jpg",
+    "/main_desk.jpg",
+    "/hairwash.jpg"
+];
 
 export default function HeroSection() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.3
+                staggerChildren: 0.3,
+                delayChildren: 0.2
             }
         }
     };
 
     const itemVariants: Variants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                type: "spring",
-                stiffness: 50,
-                damping: 20
+                duration: 0.8,
+                ease: [0.2, 0.65, 0.3, 0.9]
+            }
+        }
+    };
+
+    const imageVariants: Variants = {
+        hidden: { scale: 1.1, opacity: 0 },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+                duration: 1.5,
+                ease: "easeOut"
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                duration: 1
             }
         }
     };
@@ -34,15 +67,29 @@ export default function HeroSection() {
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background with Overlay */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/background.png"
-                    alt="Studio 8 Luxury Interior"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                    quality={100}
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#0f0518]/60 z-10" />
+                <AnimatePresence mode="popLayout">
+                    <motion.div
+                        key={currentIndex}
+                        className="absolute inset-0"
+                        variants={imageVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <Image
+                            src={HERO_IMAGES[currentIndex]}
+                            alt="Studio 8 Luxury Interior"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                            quality={100}
+                        />
+                    </motion.div>
+                </AnimatePresence>
+
+                {/* Dark Overlay for Readability */}
+                <div className="absolute inset-0 bg-black/60 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0518] via-transparent to-black/30 z-10" />
                 {/* Abstract Background Element */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[150px] opacity-20 animate-pulse z-20" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-900/40 rounded-full blur-[150px] opacity-20 z-20" />
