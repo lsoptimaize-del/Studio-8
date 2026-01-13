@@ -24,6 +24,18 @@ const features = [
         description: "Curated luxury treatments designed to make you look and feel like royalty on your most special occasion.",
         image: "/bridal.png",
     },
+    {
+        title: "Copa Cabana Botox",
+        subtitle: "Deep Repair & Smoothness",
+        description: "Deep conditioning treatment that repairs damaged fibers, reduces frizz, and adds intense shine without harsh chemicals.",
+        image: "/copa_cabana_treatment.png",
+    },
+    {
+        title: "Nanoplastia Treatment",
+        subtitle: "Advanced Nanotech Repair",
+        description: "Revolutionary formaldehyde-free smoothing that restores hair structure from the inside out using nanotechnology.",
+        image: "/nanoplastia_treatment.png",
+    },
 ];
 
 export default function FeaturedCarousel() {

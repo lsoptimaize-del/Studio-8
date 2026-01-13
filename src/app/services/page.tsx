@@ -141,6 +141,7 @@ const womenServices = [
                     { name: "Full Process (Cleansing, Peeling, Extraction, Protection, Hydration)", priceNM: "4000", priceM: "3500" },
                 ]
             },
+
             {
                 title: "Skin Basic Facial",
                 prices: [
@@ -247,6 +248,47 @@ const womenServices = [
         ]
     },
     {
+        category: "Korean Hair Spa",
+        items: [
+            {
+                title: "Velvetree Nanoplastia (with Castor Oil)",
+                description: "Enriched with Castor Oil for deep nourishment and strength.",
+                prices: [
+                    { name: "Short Hair", priceNM: "1600", priceM: "1400" },
+                    { name: "Medium Hair", priceNM: "1800", priceM: "1600" },
+                    { name: "Long Hair", priceNM: "2000", priceM: "1800" },
+                ]
+            },
+            {
+                title: "Velvetree Protien Blend (with Jojoba Oil)",
+                description: "Infused with Jojoba Oil to restore protein balance and shine.",
+                prices: [
+                    { name: "Short Hair", priceNM: "1600", priceM: "1400" },
+                    { name: "Medium Hair", priceNM: "1800", priceM: "1600" },
+                    { name: "Long Hair", priceNM: "2000", priceM: "1800" },
+                ]
+            },
+            {
+                title: "Velvetree Botox Boost (with Argan Oil)",
+                description: "Powered by Argan Oil for intense hydration and frizz control.",
+                prices: [
+                    { name: "Short Hair", priceNM: "1600", priceM: "1400" },
+                    { name: "Medium Hair", priceNM: "1800", priceM: "1600" },
+                    { name: "Long Hair", priceNM: "2000", priceM: "1800" },
+                ]
+            },
+            {
+                title: "Velvetree Anti Hair Fall (with Castor Oil)",
+                description: "Specialized formulation with Castor Oil to reduce hair fall and promote growth.",
+                prices: [
+                    { name: "Short Hair", priceNM: "1600", priceM: "1400" },
+                    { name: "Medium Hair", priceNM: "1800", priceM: "1600" },
+                    { name: "Long Hair", priceNM: "2000", priceM: "1800" },
+                ]
+            },
+        ]
+    },
+    {
         category: "Hair Services",
         items: [
             {
@@ -254,7 +296,7 @@ const womenServices = [
                 prices: [
                     { name: "Hair wash & blast dry", priceNM: "250", priceM: "200" },
                     { name: "Head Shave", priceNM: "280", priceM: "250" },
-                    { name: "Basic Hair cut", priceNM: "300", priceM: "380" }, // Note: Member price is higher in PDF source (380), preserved as is
+                    { name: "Basic Hair cut", priceNM: "380", priceM: "300" }, // Note: Member price is higher in PDF source (380), preserved as is
                     { name: "Advance Hair cut", priceNM: "500", priceM: "450" },
                     { name: "Creative Hair cut", priceNM: "550", priceM: "500" },
                 ]
@@ -333,6 +375,21 @@ const womenServices = [
                 ]
             },
             {
+                title: "Hair Treatments",
+                description: "Advanced therapeutic treatments designed to restore hair health, strength, and shine using cutting-edge formulations.",
+                prices: [
+                    { name: "Copa Cabana Botox (Short Hair)", priceNM: "6500", priceM: "5525" },
+                    { name: "Copa Cabana Botox (Medium Hair)", priceNM: "7400", priceM: "6290" },
+                    { name: "Copa Cabana Botox (Long Hair)", priceNM: "8500", priceM: "7225" },
+                    { name: "Velvetree Nanoplastia (Short Hair)", priceNM: "7500", priceM: "6375" },
+                    { name: "Velvetree Nanoplastia (Medium Hair)", priceNM: "8500", priceM: "7225" },
+                    { name: "Velvetree Nanoplastia (Long Hair)", priceNM: "9500", priceM: "8075" },
+                    { name: "OLAPLEX Hair Treatment (Short Hair)", priceNM: "2800", priceM: "2380" },
+                    { name: "OLAPLEX Hair Treatment (Medium Hair)", priceNM: "3900", priceM: "3315" },
+                    { name: "OLAPLEX Hair Treatment (Long Hair)", priceNM: "4700", priceM: "3995" },
+                ]
+            },
+            {
                 title: "Scalp Treatment",
                 prices: [
                     { name: "Anti-Dandruff (Upto Shoulder)", priceNM: "1170", priceM: "960" },
@@ -373,6 +430,14 @@ const womenServices = [
                     { name: "Ombre hair colour (Upto Shoulder)", priceNM: "4700", priceM: "3899" },
                     { name: "Ombre hair colour (Below Shoulder)", priceNM: "5900", priceM: "4999" },
                     { name: "Ombre hair colour (Upto Waist)", priceNM: "6989", priceM: "5676" },
+                ]
+            },
+            {
+                title: "TREATMENTS HAIR COLOURINGS + PRE-LIGHTNING + SMOOTHENING",
+                prices: [
+                    { name: "Short Hair", priceNM: "1850", priceM: "1572" },
+                    { name: "Medium Hair", priceNM: "2600", priceM: "2210" },
+                    { name: "Long Hair", priceNM: "3300", priceM: "2805" },
                 ]
             },
             {
@@ -549,6 +614,7 @@ interface Price {
 
 interface ServiceSubItem {
     title: string;
+    description?: string;
     prices: Price[];
 }
 
@@ -559,6 +625,7 @@ interface ServiceCategory {
 
 interface TransformedItem {
     name: string;
+    description?: string;
     p1?: string;
     p2?: string;
     isHeader?: boolean;
@@ -577,6 +644,7 @@ const transformData = (originalData: ServiceCategory[]): TransformedCategory[] =
             // Add Title Header
             newItems.push({
                 name: serviceItem.title,
+                description: serviceItem.description,
                 isHeader: true
             });
 
@@ -607,7 +675,16 @@ const allData = {
 // --- MEMOIZED ROW COMPONENT (Prevents unnecessary re-renders of list items) ---
 const ServiceRow = memo(({ item }: { item: TransformedItem }) => {
     if (item.isHeader) {
-        return <h3 className="text-2xl font-playfair font-bold text-white/90 w-full text-left pt-8 pb-3">{item.name}</h3>;
+        return (
+            <div className="w-full text-left pt-8 pb-3">
+                <h3 className="text-2xl font-playfair font-bold text-white/90">{item.name}</h3>
+                {item.description && (
+                    <p className="text-sm text-white/50 mt-1 font-light tracking-wide italic max-w-2xl">
+                        {item.description}
+                    </p>
+                )}
+            </div>
+        );
     }
 
     return (
